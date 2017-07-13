@@ -5,5 +5,5 @@ import HelloReact from './components/hello_react';
 
 ReactDOM.render(
   <HelloReact />,
-  document.getElementById('root');
+  document.getElementById('root')
 )

@@ -9,7 +9,7 @@ class HelloReact extends Component {
 
   render() {
     return (
-      <h1>this.state.hello</h1>
+      <h1>{this.state.hello}</h1>
     )
   }
 }
