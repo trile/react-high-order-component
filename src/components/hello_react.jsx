@@ -4,7 +4,7 @@ class HelloReact extends Component {
   constructor(props) {
     super(props);
 
-    this.state = { hello: 'Hello React!'}
+    this.state = { hello: 'Welcome to React!'}
   }
 
   render() {

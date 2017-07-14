@@ -1,12 +1,19 @@
+const path = require('path');
+
 module.exports = {
   //input setup
   entry: [
     './src/index.jsx',
   ],
+
   // output setup
   output: {
-    path: __dirname,
+    path: path.join(__dirname, 'public'),
     filename: 'bundle.js'
+  },
+
+  devServer: {
+    contentBase: path.join(__dirname, 'public')
   },
 
   //  setup modules to convert react and es2015
@@ -22,8 +29,8 @@ module.exports = {
   },
 
   // enable source mapping in devmode
-  devtool: '#eval-source-map',
-  
+  devtool: 'cheap-eval-source-map',
+
   // Check for file extensions
   resolve: {
     extensions: ['.js', '.jsx']
