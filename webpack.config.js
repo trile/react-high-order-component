@@ -12,8 +12,9 @@ module.exports = {
     filename: 'bundle.js'
   },
 
-  devServer: {
-    contentBase: path.join(__dirname, 'public')
+  // Check for file extensions
+  resolve: {
+    extensions: ['.js', '.jsx']
   },
 
   //  setup modules to convert react and es2015
@@ -31,8 +32,11 @@ module.exports = {
   // enable source mapping in devmode
   devtool: 'cheap-eval-source-map',
 
-  // Check for file extensions
-  resolve: {
-    extensions: ['.js', '.jsx']
+  devServer: {
+    // without this below line react-router won't work
+    // see more at https://webpack.github.io/docs/webpack-dev-server.html#the-historyapifallback-option
+    historyApiFallback: true,
+    contentBase: path.join(__dirname, 'public')
   }
+
 }
