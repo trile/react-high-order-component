@@ -1,7 +1,7 @@
 {
   "name": "react-starter",
   "version": "1.0.0",
-  "description": "Starter code for React project",
+  "description": "React High Order Component Samples",
   "repository": "https://github.com/trile/react-starter.git",
   "main": "index.html",
   "author": "Tri Le <trile@users.noreply.github.com>",
@@ -15,6 +15,7 @@
     "chai-jquery": "^2.0.0",
     "jquery": "^3.2.1",
     "jsdom": "^11.2.0",
+    "prop-types": "^15.5.10",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-redux": "^5.0.6",

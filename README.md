@@ -1,1 +1,1 @@
-# Starter kit for React project
+# React High Order Component Samples

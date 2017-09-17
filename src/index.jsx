@@ -8,15 +8,24 @@ import ReduxPromise from 'redux-promise';
 
 import reducers from './reducers';
 
-import HomeIndex from './components/home-index';
+import requireAuth from './components/require_authentication';
+import App from './components/app';
+import Resources from './components/resources';
+import Header from './components/header' ;
 
 const createStoreWithMiddleware = applyMiddleware(ReduxPromise)(createStore);
 
 ReactDOM.render(
-  <BrowserRouter>
-    <Switch>
-      <Route exact path='/' component={HomeIndex}/>
-    </Switch>
-  </BrowserRouter>,
+  <Provider store={createStoreWithMiddleware(reducers)}>
+    <BrowserRouter>
+      {/* <Switch> */}
+      <div>
+        <Header />
+        <Route exact path='/' component={App}></Route>
+        <Route path='/resources' component={requireAuth(Resources)}></Route>
+      </div>
+      {/* </Switch> */}
+    </BrowserRouter>
+  </Provider>,
   document.getElementById('root')
 )
